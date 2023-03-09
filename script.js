@@ -46,36 +46,12 @@ planChoose(plan1El, planTitle1El, planPrice1El, button1El);
 planChoose(plan2El, planTitle2El, planPrice2El, button2El);
 planChoose(plan3El, planTitle3El, planPrice3El, button3El);
 
-
-
-
-
-
 const starsEl = document.querySelector('.stars');
 const buttons = document.querySelectorAll('.rating_star_button');
 
 buttons.forEach(element => {
-    element.addEventListener('click', function () {
-
-
-        let currentStar = element.previousSibling;
-        if (currentStar.classList.contains("checked")) {
-
-            currentStar.classList.remove('checked');
-        } else {
-            currentStar.classList.add('checked');
-            element.classList.add('checked');
-        }
+    element.addEventListener('click', function (e) {
+        e.preventDefault();
+        element.classList.add('checked');
     });
 })
-    // buttons.forEach(element => {
-    //     element.addEventListener ('click', function () {
-    //         element.classList.add('checked');
-    //             // const currentStar = element.previousSibling;
-    //             // if (element.classList.contains("checked")) {
-    //             //     currentStar.classList.remove('checked');
-    //             // } else {
-    //             //     currentStar.classList.add('checked');
-    //             // }
-    //         });
-    //     })
